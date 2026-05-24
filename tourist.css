@@ -1,7 +1,3 @@
-/* ============================================================
-   BASE & RESET
-   ============================================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -19,12 +15,6 @@ body {
     flex-direction: column;
 }
 
-
-/* ============================================================
-   LAYOUT
-   ============================================================ */
-
-/* Header */
 header {
     background-color: darkslategray;
     color: white;
@@ -32,7 +22,6 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Nav */
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -42,7 +31,6 @@ nav {
     align-items: center;
 }
 
-/* Hero */
 .hero {
     display: flex;
     justify-content: center;
@@ -51,7 +39,6 @@ nav {
     padding: 1rem;
 }
 
-/* Footer */
 footer {
     background-color: gray;
     display: flex;
@@ -63,18 +50,11 @@ footer {
     font-size: 1.5rem;
 }
 
-
-/* ============================================================
-   COMPONENTS
-   ============================================================ */
-
-/* Logo */
 .logo {
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* Nav links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -93,7 +73,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Tourist hero image */
 .tourist-hero {
     display: block;
     width: 100%;
@@ -103,7 +82,6 @@ footer {
     object-fit: cover;
 }
 
-/* Tourist container */
 .touristcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -113,7 +91,6 @@ footer {
     max-width: 1400px;
 }
 
-/* Tourist cards */
 .tourist1,
 .tourist2,
 .tourist3,
@@ -125,7 +102,6 @@ footer {
     padding: 25px;
 }
 
-/* Tourist descriptions */
 .description1,
 .description2,
 .description3,
@@ -135,7 +111,6 @@ footer {
     align-items: center;
 }
 
-/* Tourist text */
 .text1,
 .text2,
 .text3,
@@ -145,11 +120,6 @@ footer {
     max-width: 400px;
     margin: 0 auto;
 }
-
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 
 @media (min-width: 320px) {
     .nav-links a {

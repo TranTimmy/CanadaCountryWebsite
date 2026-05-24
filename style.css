@@ -1,7 +1,3 @@
-/* ============================================================
-   BASE & RESET
-   ============================================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +10,6 @@ body {
     color: #333;
 }
 
-
-/* ============================================================
-   LAYOUT
-   ============================================================ */
-
-/* Header */
 header {
     background-color: darkslategray;
     color: white;
@@ -27,7 +17,6 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Nav */
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +26,6 @@ nav {
     align-items: center;
 }
 
-/* Hero */
 .hero {
     position: relative;
     width: 100%;
@@ -50,7 +38,6 @@ nav {
     text-align: center;
 }
 
-/* Footer */
 footer {
     background-color: gray;
     display: flex;
@@ -62,18 +49,11 @@ footer {
     font-size: 1.5rem;
 }
 
-
-/* ============================================================
-   COMPONENTS
-   ============================================================ */
-
-/* Logo */
 .logo {
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* Nav links (header) */
 .nav-links {
     display: flex;
     list-style: none;
@@ -92,7 +72,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Nav link (hero overlay) */
 .nav-link {
     display: flex;
     justify-content: center;
@@ -110,7 +89,6 @@ footer {
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-/* Hero wrapper */
 .wrapper {
     position: absolute;
     top: 50%;
@@ -122,7 +100,6 @@ footer {
     gap: 5rem;
 }
 
-/* Hero name */
 .name {
     font-size: 3rem;
     text-transform: uppercase;
@@ -133,14 +110,12 @@ footer {
     width: 100%;
 }
 
-/* Landing page image */
 .landingpageimage {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-/* Pics / social icons */
 .pics {
     position: absolute;
     bottom: 2rem;
@@ -155,11 +130,6 @@ footer {
 .pics img {
     width: 50px;
 }
-
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 
 @media (min-width: 320px) {
     .wrapper {
