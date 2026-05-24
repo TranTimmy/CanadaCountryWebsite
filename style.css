@@ -131,6 +131,11 @@ footer {
     width: 50px;
 }
 
+#Canada {
+    text-decoration: none;
+    color: inherit;
+}
+
 @media (min-width: 320px) {
     .wrapper {
         grid-template-columns: 1fr;
