@@ -1,3 +1,7 @@
+/* ============================================================
+   BASE & RESET
+   ============================================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +17,12 @@ body {
     flex-direction: column;
 }
 
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+/* Header */
 header {
     position: relative;
     z-index: 10;
@@ -22,27 +32,7 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-main {
-    flex: 1;
-    position: relative;
-}
-
-.aboutpageimage {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    z-index: 0;
-    filter: blur(5px);
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
+/* Nav */
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -52,6 +42,50 @@ nav {
     align-items: center;
 }
 
+/* Main */
+main {
+    flex: 1;
+    position: relative;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 1.5rem;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    z-index: 10;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Nav links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -70,19 +104,19 @@ nav {
     opacity: 0.8;
 }
 
-.hero {
-    position: relative;
-    z-index: 1;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    gap: 3rem;
-    align-items: center;
-    padding: 3rem 1.5rem;
+/* About page image */
+.aboutpageimage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+    filter: blur(5px);
 }
 
+/* Hero text */
 .hero-text {
     display: flex;
     flex-direction: column;
@@ -92,6 +126,7 @@ nav {
     font-size: 2rem;
 }
 
+/* Table */
 .table-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -113,6 +148,11 @@ nav {
     }
 }
 
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media (min-width: 320px) {
     .nav-links a {
         font-size: 1rem;
@@ -124,7 +164,8 @@ nav {
         font-size: 1.2rem;
     }
     .hero {
-        gap: 2rem; padding: 2rem 1rem;
+        gap: 2rem;
+        padding: 2rem 1rem;
     }
 }
 
@@ -159,15 +200,4 @@ nav {
     .hero-text {
         max-width: 1600px;
     }
-}
-
-footer {
-    position: relative;
-    z-index: 10;
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 1.5rem;
 }

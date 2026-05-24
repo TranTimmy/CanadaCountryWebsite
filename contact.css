@@ -1,3 +1,7 @@
+/* ============================================================
+   BASE & RESET
+   ============================================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +17,12 @@ body {
     flex-direction: column;
 }
 
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+/* Header */
 header {
     position: relative;
     z-index: 10;
@@ -22,11 +32,23 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Nav */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main */
 main {
     flex: 1;
     position: relative;
 }
 
+/* Hero */
 .hero {
     position: absolute;
     inset: 0;
@@ -40,53 +62,30 @@ main {
     color: black;
 }
 
-.wrap {
+/* Footer */
+footer {
     position: relative;
+    z-index: 10;
+    background-color: gray;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 1rem;
-    color: white;
-    font-size: 3rem;
-    z-index: 1;
-}
-
-.form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 1;
+    padding: 20px;
+    font-size: 1.5rem;
 }
 
-.contactpageimage {
-    width: 100%;
-    height: 100%;
-    display: block;
-    filter: blur(5px);
-    object-fit: cover;
-    position: absolute;
-    inset: 0;
-}
 
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+
+/* Logo */
 .logo {
     font-size: 2rem;
     font-weight: bold;
 }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* Nav links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -105,10 +104,48 @@ nav {
     opacity: 0.8;
 }
 
+/* Contact page image */
+.contactpageimage {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: blur(5px);
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+/* Wrap */
+.wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    color: white;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+/* Form */
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media (min-width: 320px) {
-    .wrap {
-        grid-template-columns: 1fr;
-    }
     .nav-links a {
         font-size: 1rem;
     }
@@ -116,6 +153,7 @@ nav {
         gap: 1rem;
     }
     .wrap {
+        grid-template-columns: 1fr;
         font-size: 1rem;
     }
 }
@@ -148,15 +186,4 @@ nav {
     .wrap {
         max-width: 1600px;
     }
-}
-
-footer {
-    position: relative;
-    z-index: 10;
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 1.5rem;
 }

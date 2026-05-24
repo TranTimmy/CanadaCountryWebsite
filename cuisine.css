@@ -1,3 +1,7 @@
+/* ============================================================
+   BASE & RESET
+   ============================================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +19,12 @@ body {
     flex-direction: column;
 }
 
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+/* Header */
 header {
     background-color: darkslategray;
     color: white;
@@ -22,67 +32,7 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding: 1rem;
-}
-
-.food-hero {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border: 5px solid black;
-    object-fit: cover;
-}
-
-.foodcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    width: 100%;
-    max-width: 1400px;
-}
-
-.food1,
-.food2,
-.food3,
-.food4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 25px;
-    padding: 25px;
-}
-
-.description1,
-.description2,
-.description3,
-.description4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text1,
-.text2,
-.text3,
-.text4 {
-    display: block;
-    text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
+/* Nav */
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -92,6 +42,39 @@ nav {
     align-items: center;
 }
 
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Nav links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -110,24 +93,82 @@ nav {
     opacity: 0.8;
 }
 
+/* Food hero image */
+.food-hero {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 5px solid black;
+    object-fit: cover;
+}
+
+/* Food container */
+.foodcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* Food cards */
+.food1,
+.food2,
+.food3,
+.food4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    padding: 25px;
+}
+
+/* Food descriptions */
+.description1,
+.description2,
+.description3,
+.description4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Food text */
+.text1,
+.text2,
+.text3,
+.text4 {
+    display: block;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media (min-width: 320px) {
-    .foodcontainer {
-        grid-template-columns: 1fr;
-    }
     .nav-links a {
         font-size: 1rem;
     }
     .nav-links {
         gap: 1rem;
     }
+    .foodcontainer {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (min-width: 600px) {
-    .foodcontainer {
-        grid-template-columns: 1fr 1fr;
-    }
     .nav-links a {
         font-size: 1.2rem;
+    }
+    .foodcontainer {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -150,15 +191,4 @@ nav {
     .foodcontainer {
         max-width: 1600px;
     }
-}
-
-footer {
-    background-color: gray;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30%;
-    padding: 20px;
-    font-size: 1.5rem;
 }
