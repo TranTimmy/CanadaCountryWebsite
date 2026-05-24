@@ -8,31 +8,71 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
+    position: relative;
+    z-index: 10;
     background-color: darkslategray;
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.image {
+}
+
+main {
+    flex: 1;
+    position: relative;
+    min-height: calc(100vh - 65px - 70px);
+}
+
 .hero {
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    top: 1%;
     width: 100%;
     height: calc(100vh - 65px - 70px);
     overflow: hidden;
+    color: black;
+    inset: auto;
+}
+
+.wrap {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.form {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.landingpageimage {
+.contactpageimage {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
+    filter: blur(5px);
+    object-fit: cover;
+    position: absolute;
 }
 
 .logo {
@@ -67,61 +107,8 @@ nav {
     opacity: 0.8;
 }
 
-.wrapper {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    gap: 5rem;
-}
-
-.name {
-    font-size: 3rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: red;
-    -webkit-text-stroke: 3px black;
-    backdrop-filter: blur(2px);
-    width: 100%;
-}
-
-.nav-link {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-    backdrop-filter: blur(2px);
-    width: 100%;
-}
-
-.nav-link a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 2rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-}
-
-.pics {
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    z-index: 1;
-}
-
-.pics img {
-    width: 50px;
-}
-
 @media (min-width: 320px) {
-    .wrapper {
+    .wrap {
         grid-template-columns: 1fr;
     }
     .nav-links a {
@@ -133,7 +120,7 @@ nav {
 }
 
 @media (min-width: 600px) {
-    .wrapper {
+    .wrap {
         grid-template-columns: 1fr 1fr;
     }
     .nav-links a {
@@ -154,7 +141,7 @@ nav {
 }
 
 @media (min-width: 1920px) {
-    .wrapper {
+    .wrap {
         max-width: 1600px;
     }
 }

@@ -30,7 +30,7 @@ header {
     padding: 1rem;
 }
 
-.animals-hero {
+.food-hero {
     display: block;
     width: 100%;
     max-width: 400px;
@@ -39,7 +39,7 @@ header {
     object-fit: cover;
 }
 
-.animalcontainer {
+.foodcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -48,10 +48,10 @@ header {
     max-width: 1400px;
 }
 
-.animal1,
-.animal2,
-.animal3,
-.animal4 {
+.food1,
+.food2,
+.food3,
+.food4 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +111,7 @@ nav {
 }
 
 @media (min-width: 320px) {
-    .animalcontainer {
+    .foodcontainer {
         grid-template-columns: 1fr;
     }
     .nav-links a {
@@ -123,7 +123,7 @@ nav {
 }
 
 @media (min-width: 600px) {
-    .animalcontainer {
+    .foodcontainer {
         grid-template-columns: 1fr 1fr;
     }
     .nav-links a {
@@ -147,7 +147,7 @@ nav {
 }
 
 @media (min-width: 1920px) {
-    .animalcontainer {
+    .foodcontainer {
         max-width: 1600px;
     }
 }

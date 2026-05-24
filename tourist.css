@@ -10,9 +10,9 @@ body {
     color: #333;
     background-color: darkgray;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -23,10 +23,59 @@ header {
 }
 
 .hero {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    height: calc(100vh - 65px - 70px);
-    overflow: hidden;
+    padding: 1rem;
+}
+
+.tourist-hero {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 5px solid black;
+    object-fit: cover;
+}
+
+.touristcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.tourist1,
+.tourist2,
+.tourist3,
+.tourist4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    padding: 25px;
+}
+
+.description1,
+.description2,
+.description3,
+.description4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+    display: block;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -61,32 +110,45 @@ nav {
     opacity: 0.8;
 }
 
-@media (max-width: 1920px) {
-    :root {
-        --header-height: 72px;
-        --footer-height: 72px;
+@media (min-width: 320px) {
+    .touristcontainer {
+        grid-template-columns: 1fr;
     }
-
-    nav {
-        max-width: 1600px;
+    .nav-links a {
+        font-size: 1rem;
     }
-
-    .nav-links li a {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        font-size: 2.25rem;
+    .nav-links {
+        gap: 1rem;
     }
 }
 
-@media (max-width: 320px) {
-    :root {
-        --header-height: 60px;
+@media (min-width: 600px) {
+    .touristcontainer {
+        grid-template-columns: 1fr 1fr;
     }
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
 
-    .nav-links li a {
-        font-size: 1.05rem;
+@media (min-width: 1024px) {
+    .nav-links a {
+        font-size: 1.4rem;
+    }
+    .hero {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .touristcontainer {
+        max-width: 1600px;
     }
 }
 
