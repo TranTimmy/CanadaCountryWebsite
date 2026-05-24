@@ -22,32 +22,26 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.image {
-}
-
 main {
     flex: 1;
     position: relative;
-    min-height: calc(100vh - 65px - 70px);
 }
 
 .hero {
-    position: relative;
+    position: absolute;
+    inset: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 2rem;
-    top: 1%;
-    width: 100%;
-    height: calc(100vh - 65px - 70px);
     overflow: hidden;
     color: black;
-    inset: auto;
 }
 
 .wrap {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,24 +49,28 @@ main {
     text-align: center;
     gap: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    z-index: 1;
 }
 
 .form {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 1;
 }
 
 .contactpageimage {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     filter: blur(5px);
     object-fit: cover;
     position: absolute;
+    inset: 0;
 }
 
 .logo {
@@ -117,14 +115,20 @@ nav {
     .nav-links {
         gap: 1rem;
     }
+    .wrap {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 600px) {
-    .wrap {
-        grid-template-columns: 1fr 1fr;
-    }
     .nav-links a {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    .nav-links {
+        gap: 1rem;
+    }
+    .wrap {
+        font-size: 2rem;
     }
 }
 
@@ -147,12 +151,12 @@ nav {
 }
 
 footer {
+    position: relative;
+    z-index: 10;
     background-color: gray;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30%;
     padding: 20px;
     font-size: 1.5rem;
 }

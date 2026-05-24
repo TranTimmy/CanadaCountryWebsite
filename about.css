@@ -8,20 +8,33 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
+    position: relative;
+    z-index: 10;
     background-color: darkslategray;
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.aboutpageimage {
+main {
+    flex: 1;
     position: relative;
+}
+
+.aboutpageimage {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    z-index: 0;
     filter: blur(5px);
 }
 
@@ -58,72 +71,81 @@ nav {
 }
 
 .hero {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 3rem;
     align-items: center;
-    width: 100%;
+    padding: 3rem 1.5rem;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
+    align-items: center;
     gap: 1rem;
     color: black;
     font-size: 2rem;
-    align-items: center;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .table {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: black;
-    font-size: 1rem;
     border-collapse: collapse;
     background-color: rgba(255, 255, 255, 0.85);
-    align-items: center;
+    font-size: 1rem;
+    width: 100%;
+    min-width: 600px;
 
     td,
     th {
         border: 1px solid black;
         padding: 12px 20px;
+        text-align: left;
     }
 }
 
 @media (min-width: 320px) {
-    .hero-text {
-        grid-template-columns: 1fr;
-    }
     .nav-links a {
         font-size: 1rem;
     }
     .nav-links {
         gap: 1rem;
     }
+    .hero-text {
+        font-size: 1.2rem;
+    }
+    .hero {
+        gap: 2rem; padding: 2rem 1rem;
+    }
 }
 
 @media (min-width: 600px) {
-    .hero-text {
-        grid-template-columns: 1fr 1fr;
-    }
     .nav-links a {
         font-size: 1.2rem;
+    }
+    .hero-text {
+        font-size: 1.6rem;
     }
 }
 
 @media (min-width: 1024px) {
     .nav-links a {
         font-size: 1.4rem;
+    }
+    .hero-text {
+        font-size: 2rem;
+    }
+    .table {
+        font-size: 1.1rem;
     }
 }
 
@@ -140,12 +162,12 @@ nav {
 }
 
 footer {
+    position: relative;
+    z-index: 10;
     background-color: gray;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30%;
     padding: 20px;
     font-size: 1.5rem;
 }

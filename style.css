@@ -123,6 +123,7 @@ nav {
 @media (min-width: 320px) {
     .wrapper {
         grid-template-columns: 1fr;
+        font-size: 1rem;
     }
     .nav-links a {
         font-size: 1rem;
@@ -137,6 +138,9 @@ nav {
         grid-template-columns: 1fr 1fr;
     }
     .nav-links a {
+        font-size: 1.2rem;
+    }
+    .nav-link {
         font-size: 1.2rem;
     }
 }
